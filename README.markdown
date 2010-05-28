@@ -10,9 +10,9 @@ The extension provides basic views and a stylesheet that can easily be overridde
 Installation
 ------------
 
->script/extension install git://github.com/jacobwg/spree-cms.git
->rake gems:install
->rake db:migrate
+    script/extension install git://github.com/jacobwg/spree-cms.git
+    rake gems:install
+    rake db:migrate
 
 All authors for the blog should be given a display name in the admin/users edit form. 
 
@@ -48,7 +48,7 @@ Comments can be opened or closed for a post.  The comment form displays on the p
 
 Comments are now managed by Disqus via the disqus gem, http://github.com/norman/disqus/. Management of spam and comment moderation is done through the Disqus UI.
 
-Create disqus account at (http://disqus.com/comments/).  
+Create disqus account at [http://disqus.com/comments/](http://disqus.com/comments/).  
 
 
 Blog
@@ -87,11 +87,11 @@ You can add a blog link anywhere on your site or include the recent_articles par
 
 One option is to add the Blog link to the store_menu partial
 
-'<li><%= link_to t('blog'), posts_path %></li>'
+    <li><%= link_to t('blog'), posts_path %></li>
 
 Use the cms_content_for partial to include the cms css and recent articles partial in the sidebar.
 
-'<%= render :partial => 'shared/cms_content_for'%>'
+    <%= render :partial => 'shared/cms_content_for'%>
 
 
 
