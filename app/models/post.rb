@@ -32,9 +32,8 @@ class Post < ActiveRecord::Base
   end
     
   def format_markup
-    if not self.body.nil?
-      self.body = RedCloth.new(self.body_raw,[:sanitize_html, :filter_html]).to_html
-    end
+    self.body ||= RedCloth.new(self.body_raw,[:sanitize_html, :filter_html]).to_html
+ 
     
     #~ if self.excerpt.blank?
       #~ self.excerpt = self.body.gsub(/\<[^\>]+\>/, '')[0...50] + "..."
