@@ -1,0 +1,22 @@
+<%= error_messages_for :page %>
+
+<% form_for(:page,  :url => collection_url, :html => { :multipart => true }) do |f| %>
+<fieldset>
+
+  <% f.field_container :title do %>
+    <%= f.label :title, t("name") %> <span class="required">*</span><br />
+    <%= f.text_field :title, :class => 'fullwidth title'  %>
+    <%= f.error_message_on :title %>
+  <% end %>
+
+  <div class="yui-gb">
+    <div class="yui-u first">
+
+    </div>
+
+  </div>
+
+  <%= render :partial => 'admin/shared/new_resource_links' %>
+
+</fieldset>
+<% end %>
