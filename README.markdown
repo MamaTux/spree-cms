@@ -1,9 +1,9 @@
-CMS for Spree
+Spree on CMS
 =========
 
-A blog / static page extension for Spree version 10.x. Spree admin users can create blog posts and static pages.  The extension extends the admin interface to allow the adding of display names that will be displayed on blog posts.
+A blog / static page extension for Spree version 10.x. Spree admin users can create blog posts and static pages.  The extension extends the admin interface to allow the adding of display names to users that will be displayed on blog posts.
 
-Comments on blog posts are currently powered by [Disqus](http://disqus.com/comments/)  The comment system and/or comments on individual blog posts can be disabled, if preferred.
+Comments on blog posts are currently powered by [Disqus](http://disqus.com/comments/).  The comment system and/or comments on individual blog posts can be disabled, if preferred.
 
 The extension provides basic views and a stylesheet that can easily be overridden through your site extension.  Also, several helpers exist to allow tags, posts and pages to be accesible in your site views.
 
