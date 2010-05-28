@@ -99,7 +99,6 @@ TODO
 -----
 
 - improve permalinks for posts
-
 - wysiwyg editor for blog posts and pages.
 
 
