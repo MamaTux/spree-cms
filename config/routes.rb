@@ -1,5 +1,5 @@
 
-map.resources :posts, :as => Spree::Config[:cms_permalink]
+map.resources :posts #, :as => Spree::Config[:cms_permalink]
 map.tag_posts "#{Spree::Config[:cms_permalink]}/tags/:tag_name", :controller => 'posts', :action => 'tags'
 map.resources :pages
 

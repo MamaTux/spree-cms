@@ -9,6 +9,7 @@ en:
       editing_post: Editing Post
       editing_page: Editing Page
       comma_separated: Comma Separated
+      select_author: Select Author
     posts: Posts
     post: Post
     pages: Pages

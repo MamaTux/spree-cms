@@ -26,7 +26,7 @@
       
       <p>
         <%= f.label :user_id, t("author") %>
-        <%= f.collection_select :user_id, User.all, :id, :display_name %>
+        <%= f.collection_select :user_id, User.all, :id, :display_name, {:include_blank => false} %>
       </p>
       
       <% f.field_container :permalink do %>

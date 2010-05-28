@@ -32,7 +32,7 @@
     
       <p>
         <%= f.label :user_id, t("author")%><br />
-        <%= f.collection_select :user_id, User.all, :id, :display_name, {"style" => "width:200px"} %>
+        <%= f.collection_select :user_id, User.roles_name_equals("admin"), :id, :display_name, {:prompt => t("cms.select_author")} %>
         <%= f.error_message_on :user_id %>
       </p>
 
