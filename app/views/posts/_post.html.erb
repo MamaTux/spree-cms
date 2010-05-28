@@ -6,7 +6,7 @@
 		  <% unless post.user.display_name.blank? %>By <%= post.user.display_name %> <% end %> - <%= link_to "comments", post_path(post, :anchor => "disqus_thread") %>
 		</div>
 		<div class="post-content"><%= post.body %></div>
-		<div class="post-meta"><% unless post.tags.empty? %><%= t("tags") %>: <%= linked_tag_list(post.tags) %><% end %></div>
+		<div class="post-meta"><% unless post.tags.empty? %><%= t("cms.tags") %>: <%= linked_tag_list(post.tags) %><% end %></div>
 	</div>
 
 

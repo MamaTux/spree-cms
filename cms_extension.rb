@@ -2,8 +2,8 @@
 # require_dependency 'application'
 
 class CmsExtension < Spree::Extension
-  version "2.0"
-  description "A blog/cms extension for spree"
+  version "1.0"
+  description "A blog / static-page extension for spree"
   url "http://github.com/jacobwg/spree-cms"
 
   # Please use blog/config/routes.rb instead for extension routes.
@@ -22,11 +22,6 @@ class CmsExtension < Spree::Extension
     unless RAILS_ENV == "production"
       Disqus::defaults[:developer] = true
     end
-
-    # Add your extension tab to the admin.
-    # Requires that you have defined an admin controller:
-    # app/controllers/admin/yourextension_controller
-    # and that you mapped your admin in config/routes
 
     # make your helper avaliable in all views
     Spree::BaseController.class_eval do
@@ -66,7 +61,7 @@ class CmsExtension < Spree::Extension
     end  
     
     User.class_eval do
-        has_many :ws_items
+        has_many :posts
         
         attr_accessible :display_name        
     end

@@ -4,7 +4,7 @@
 <fieldset>
 
   <% f.field_container :title do %>
-    <%= f.label :title, t("name") %> <span class="required">*</span><br />
+    <%= f.label :title, t("cms.title") %> <span class="required">*</span><br />
     <%= f.text_field :title, :class => 'fullwidth title'  %>
     <%= f.error_message_on :title %>
   <% end %>

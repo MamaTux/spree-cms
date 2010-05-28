@@ -3,7 +3,7 @@
 <div class='toolbar'>
   <ul class='actions'>
     <li id="new_ot_link">
-      <%= button_link_to_remote t("new-post"),
+      <%= button_link_to_remote t("cms.new_post"),
                          {:url => new_object_url,
                          :method => :get,
                          :update => "new-post"}, :icon => 'add' %>
@@ -13,7 +13,7 @@
 </div>
 
 
-<h1><%= "#{t("actions.listing")} #{t("posts")}" %></h1>
+<h1><%= "#{t('actions.listing')} #{t('posts')}" %></h1>
 
 <%= image_tag "spinner.gif", :plugin=>"spree", :style => "display:none", :id => 'busy_indicator' %>
 <div id="new-post"></div>
@@ -21,9 +21,9 @@
 <table class="index">
   <tr>
     <% hook :admin_posts_index_headers do %>
-      <th><%= order @search, :by => :title, :as => t("title") %></th>
-      <th><%= order @search, :by => :author, :as => t("author") %></th>
-      <th><%= t("tags") %></th>
+      <th><%= order @search, :by => :title, :as => t("cms.title") %></th>
+      <th><%= order @search, :by => :author, :as => t("cms.author") %></th>
+      <th><%= t("cms.tags") %></th>
       <th><%= order @search, :by => :date, :as => t("cms.date") %></th>
     <% end %>
     <th>
@@ -35,7 +35,7 @@
   <%- locals = {:post => post} -%>
   <tr>
     <% hook :admin_posts_index_rows, locals do %>
-      <td><%= link_to h(post.title), [:edit,:admin,post] %> (<%= post.is_active == 1 ? t("published") : t("draft") %>) </td>      
+      <td><%= link_to h(post.title), [:edit,:admin,post] %> (<%= post.is_active == 1 ? t("cms.published") : t("cms.draft") %>) </td>      
       <td><%= link_to post.user.display_name, [:admin, post.user] %></td>
       <td><%= post.tag_list %></td>
       <td><%= (post.published_at.blank? ? post.updated_at : post.published_at).strftime("%B %d, %Y at %I:%M%p") %></td>
@@ -62,7 +62,7 @@
       <%- locals = {:f => f} -%>
       <% hook :admin_posts_index_search, locals do %>
         <p>
-          <label><%= t("title") %></label><br />
+          <label><%= t("cms.title") %></label><br />
           <%= f.text_field :title_contains, :size => 15 %>
         </p>
         
@@ -79,7 +79,7 @@
         </div>
 
         <p>
-          <label><%= t("author") %></label><br />
+          <label><%= t("cms.author") %></label><br />
           <%= f.select :user_id_equals, User.all.collect {|r| [ r.display_name, r.id]} %></p>
         </p>
         <p>
