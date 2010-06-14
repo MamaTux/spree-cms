@@ -12,6 +12,12 @@
   <div class="yui-gb">
     <div class="yui-u first">
 
+      <% f.field_container :body_raw do %>
+        <%= f.label :body_raw, t("cms.body")%> <span class="required">*</span><br />
+        <%= f.text_area :body_raw, {:cols => 120, :rows => 4, :class => 'fullwidth'} %>
+        <%= f.error_message_on :body_raw %>
+      <% end %>
+
     </div>
 
   </div>
